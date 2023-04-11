@@ -12,6 +12,7 @@ const app = express();
 
 //connect to database
 connectDB();
+app.use(cors());
 
 app.listen(port, console.log(`Server running on ${port}`));
 
