@@ -7,6 +7,8 @@ import {
   gql,
 } from "@apollo/client";
 import Clients from "./components/Clients";
+import AddClientModal from "./components/AddClientModal";
+import Projects from "./components/Projects";
 
 //inMemoryCache enables Apollo to respond immediately to
 //queries already cached data w/o network req
@@ -39,8 +41,11 @@ function App() {
     <>
       <ApolloProvider client={client}>
         <Header />
-        <Clients />
-        <div className="container">hello</div>
+        <div className="container">
+          <AddClientModal />
+          <Projects />
+          <Clients />
+        </div>
       </ApolloProvider>
     </>
   );
