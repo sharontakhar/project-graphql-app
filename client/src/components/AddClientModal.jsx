@@ -41,7 +41,7 @@ export default function AddClientModal() {
         data-bs-toggle="modal"
         data-bs-target="#addClientModal"
       >
-        <div className="flex align-items-center">
+        <div className="d-flex align-items-center">
           <FaUser className="icon" />
           <div>Add Client</div>
         </div>
@@ -50,14 +50,13 @@ export default function AddClientModal() {
       <div
         className="modal fade"
         id="addClientModal"
-        tabIndex="-1"
-        aria-labelledby="Label"
+        tabIndex="addClientModalLabel"
         aria-hidden="true"
       >
         <div className="modal-dialog">
           <div className="modal-content">
             <div className="modal-header">
-              <h1 className="modal-title fs-5" id="exampleModalLabel">
+              <h1 className="modal-title fs-5" id="addClientModalLabel">
                 Add Client
               </h1>
               <button
@@ -68,7 +67,7 @@ export default function AddClientModal() {
               ></button>
             </div>
             <div className="modal-body">
-              <form onSubmit={onsubmit}>
+              <form onSubmit={onSubmit}>
                 <div className="mb-3">
                   <label className="form-label">Name</label>
                   <input
